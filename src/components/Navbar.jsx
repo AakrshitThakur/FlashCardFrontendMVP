@@ -23,13 +23,13 @@ const Navbar = () => {
         <div className="flex flex-col sm:flex sm:flex-row text-xs sm:text-sm md:text-md lg:text-lg space-x-2 md:space-x-4">
           <Link
             to="/flashcards"
-            className="text-white hover:text-gray-200 transition-colors"
+            className="text-white text-left hover:text-gray-200 transition-colors"
           >
             Home
           </Link>
           <Link
             to="/add-flashcard"
-            className="text-white hover:text-gray-200 transition-colors"
+            className="text-white text-left hover:text-gray-200 transition-colors"
           >
             Add Flashcard
           </Link>
@@ -38,7 +38,7 @@ const Navbar = () => {
           {token ? (
             <button
               onClick={handleLogout}
-              className="text-white hover:text-gray-200 transition-colors"
+              className="text-white text-left hover:text-gray-200 transition-colors"
             >
               Logout
             </button>
@@ -46,13 +46,13 @@ const Navbar = () => {
             <>
               <Link
                 to="/login"
-                className="text-white hover:text-gray-200 transition-colors"
+                className="text-white text-left hover:text-gray-200 transition-colors"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className="text-white hover:text-gray-200 transition-colors"
+                className="text-white text-left hover:text-gray-200 transition-colors"
               >
                 Register
               </Link>
