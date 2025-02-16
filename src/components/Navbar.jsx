@@ -13,14 +13,14 @@ const Navbar = () => {
 
   return (
     <nav className="bg-blue-600 p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex flex-col sm:flex sm:flex-row sm:justify-between sm:items-center">
         {/* Logo or Brand Name */}
         <Link to="/" className="text-white text-xl font-bold">
           FlashCardMVP
         </Link>
 
         {/* Navigation Links */}
-        <div className="flex space-x-4">
+        <div className="flex flex-col sm:flex sm:flex-row text-xs sm:text-sm md:text-md lg:text-lg space-x-2 md:space-x-4">
           <Link
             to="/flashcards"
             className="text-white hover:text-gray-200 transition-colors"
