@@ -70,55 +70,41 @@ This is the frontend part of a **MERN stack** flashcard application. It allows u
 
    ```bash
    git clone <repository-url>
-   cd frontend
+   cd FlashCardFrontendMVP
 
    ```
 
 2. Install dependencies:
 
+```bash
 npm install
+```
 
 3. Set up environment variables:
 
+```bash
 Create a .env file in the root of the frontend folder.
+```
 
 Add the following variables:
 
+```bash
 VITE_API_BASE_URL=http://localhost:5000
 
 Replace http://localhost:5000 with the URL of your backend server.
+```
 
 4. Start the development server:
 
+```bash
 npm run dev
+```
 
 5. Open the app:
 
+```bash
 Visit http://localhost:5173 in your browser.
-
----
-
-Project Structure
-
-frontend/
-├── public/
-├── src/
-│ ├── components/
-│ │ ├── AddFlashcard.jsx
-│ │ ├── EditFlashcard.jsx
-│ │ ├── Flashcards.jsx
-│ │ ├── Login.jsx
-│ │ ├── Logout.jsx
-│ │ ├── Navbar.jsx
-│ │ └── Register.jsx
-│ ├── App.jsx
-│ ├── main.jsx
-│ └── index.css
-├── .env
-├── .gitignore
-├── package.json
-├── README.md
-└── vite.config.js
+```
 
 ---
 
