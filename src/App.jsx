@@ -4,8 +4,8 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Flashcards from "./components/Flashcards";
 import AddFlashcard from "./components/AddFlashcard";
-import EditFlashcard from './components/EditFlashcard';
-import Navbar from './components/Navbar';
+import EditFlashcard from "./components/EditFlashcard";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (

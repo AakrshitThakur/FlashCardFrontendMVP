@@ -24,7 +24,7 @@ const Register = () => {
 
     try {
       // Send a POST request to the backend with username and password
-      const res = await axios.post("http://localhost:5000/register", {
+      const res = await axios.post("https://flashcardbackendmvp.onrender.com/register", {
         username,
         password,
       });
@@ -44,6 +44,10 @@ const Register = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       {/* Registration Form */}
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md">
+        <em className="text-xs">
+          You can log in using the username 'demo' and the password 'demo' to
+          test this MVP.
+        </em>
         <h2 className="text-2xl mb-4">Register</h2>
 
         {/* Username Input Field */}

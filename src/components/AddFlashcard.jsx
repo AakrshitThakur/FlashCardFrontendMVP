@@ -19,7 +19,7 @@ const AddFlashcard = () => {
 
       // Send POST request to the server to add a new flashcard
       const res = await axios.post(
-        "http://localhost:5000/flashcards", // API endpoint for flashcards
+        "https://flashcardbackendmvp.onrender.com/flashcards", // API endpoint for flashcards
         { question, answer }, // Request body containing the flashcard data
         {
           headers: { "x-auth-token": token }, // Attach token in request headers for authentication

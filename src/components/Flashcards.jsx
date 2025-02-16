@@ -25,7 +25,7 @@ const Flashcards = () => {
       const token = localStorage.getItem("token"); // Get the JWT token from local storage
       try {
         // Send a GET request to fetch flashcards for the logged-in user
-        const res = await axios.get("http://localhost:5000/flashcards", {
+        const res = await axios.get("https://flashcardbackendmvp.onrender.com/flashcards", {
           headers: { "x-auth-token": token }, // Include the token in the request headers
         });
         setFlashcards(res.data); // Update the flashcards state with the fetched data
@@ -49,7 +49,7 @@ const Flashcards = () => {
     try {
       // Send a PUT request to update the flashcard's box level and nextReviewDate
       await axios.put(
-        `http://localhost:5000/flashcards/${flashcards[currentCard]._id}`, // Flashcard ID
+        `https://flashcardbackendmvp.onrender.com/${flashcards[currentCard]._id}`, // Flashcard ID
         { correct }, // Payload: whether the user answered correctly
         {
           headers: { "x-auth-token": token }, // Include the token in the request headers
@@ -151,12 +151,12 @@ const Flashcards = () => {
         </button>
       </div>
       <div className="mt-6">
-      <Link
-        to={`/edit-flashcard/${currentFlashcard._id}`}
-        className="px-4 py-2 bg-yellow-500 text-white rounded-lg shadow hover:bg-yellow-600 transition-colors"
-      >
-        Edit
-      </Link>
+        <Link
+          to={`/edit-flashcard/${currentFlashcard._id}`}
+          className="px-4 py-2 bg-yellow-500 text-white rounded-lg shadow hover:bg-yellow-600 transition-colors"
+        >
+          Edit
+        </Link>
       </div>
     </div>
   );
