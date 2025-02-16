@@ -70,114 +70,94 @@ This is the frontend part of a **MERN stack** flashcard application. It allows u
 
    ```bash
    git clone <repository-url>
-   cd FlashCardFrontendMVP
-
+   cd frontend
    ```
 
-2. Install dependencies:
+2. **Install dependencies**:
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-3. Set up environment variables:
+3. **Set up environment variables**:
 
-```bash
-Create a .env file in the root of the frontend folder.
-```
+   - Create a `.env` file in the root of the `frontend` folder.
+   - Add the following variables:
+     ```plaintext
+     VITE_API_BASE_URL=http://localhost:5000
+     ```
+     Replace `http://localhost:5000` with the URL of your backend server.
 
-Add the following variables:
+4. **Start the development server**:
 
-```bash
-VITE_API_BASE_URL=http://localhost:5000
+   ```bash
+   npm run dev
+   ```
 
-Replace http://localhost:5000 with the URL of your backend server.
-```
-
-4. Start the development server:
-
-```bash
-npm run dev
-```
-
-5. Open the app:
-
-```bash
-Visit http://localhost:5173 in your browser.
-```
+5. **Open the app**:
+   - Visit `http://localhost:5173` in your browser.
 
 ---
 
-Components
+## Components
 
-1. Navbar:
+1. **Navbar**:
 
-Displays navigation links (Home, Add Flashcard, Login, Register, Logout).
+   - Displays navigation links (Home, Add Flashcard, Login, Register, Logout).
+   - Conditionally shows Login/Register or Logout based on authentication status.
 
-Conditionally shows Login/Register or Logout based on authentication status.
+2. **Login**:
 
-2. Login:
+   - Allows users to log in using their credentials.
 
-Allows users to log in using their credentials.
+3. **Register**:
 
-3. Register:
+   - Allows new users to register.
 
-Allows new users to register.
+4. **Flashcards**:
 
-4. Flashcards:
+   - Displays flashcards due for review.
+   - Allows users to flip cards, mark them as correct or incorrect, and view progress.
 
-Displays flashcards due for review.
+5. **AddFlashcard**:
 
-Allows users to flip cards, mark them as correct or incorrect, and view progress.
+   - Form to add a new flashcard.
 
-5. AddFlashcard:
+6. **EditFlashcard**:
 
-Form to add a new flashcard.
+   - Form to edit an existing flashcard.
 
-6. EditFlashcard:
-
-Form to edit an existing flashcard.
-
-7. Logout:
-
-Handles user logout by removing the JWT token and redirecting to the login page.
+7. **Logout**:
+   - Handles user logout by removing the JWT token and redirecting to the login page.
 
 ---
 
-API Endpoints
+## API Endpoints
 
 The frontend interacts with the following backend API endpoints:
 
-POST /login: User login.
-
-POST /register: User registration.
-
-GET /flashcards: Fetch all flashcards for the logged-in user.
-
-POST /flashcards: Add a new flashcard.
-
-PUT /flashcards/:id: Update a flashcard (e.g., move to the next box).
-
-DELETE /flashcards/:id: Delete a flashcard.
+- **POST /login**: User login.
+- **POST /register**: User registration.
+- **GET /flashcards**: Fetch all flashcards for the logged-in user.
+- **POST /flashcards**: Add a new flashcard.
+- **PUT /flashcards/:id**: Update a flashcard (e.g., move to the next box).
+- **DELETE /flashcards/:id**: Delete a flashcard.
 
 ---
 
-Contributing
+## Contributing
 
 1. Fork the repository.
-
-2. Create a new branch (git checkout -b feature/YourFeatureName).
-
-3. Commit your changes (git commit -m 'Add some feature').
-
-4. Push to the branch (git push origin feature/YourFeatureName).
-
+2. Create a new branch (`git checkout -b feature/YourFeatureName`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeatureName`).
 5. Open a pull request.
 
 ---
 
-Acknowledgments
+## Acknowledgments
 
-Inspired by the Leitner System for spaced repetition.
+- Inspired by the **Leitner System** for spaced repetition.
+- Built with **React** and **Tailwind CSS**.
 
-Built with React and Tailwind CSS.
+---
