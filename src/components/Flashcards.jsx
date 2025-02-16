@@ -49,7 +49,7 @@ const Flashcards = () => {
     try {
       // Send a PUT request to update the flashcard's box level and nextReviewDate
       await axios.put(
-        `https://flashcardbackendmvp.onrender.com/${flashcards[currentCard]._id}`, // Flashcard ID
+        `https://flashcardbackendmvp.onrender.com/flashcards/${flashcards[currentCard]._id}`, // Flashcard ID
         { correct }, // Payload: whether the user answered correctly
         {
           headers: { "x-auth-token": token }, // Include the token in the request headers
